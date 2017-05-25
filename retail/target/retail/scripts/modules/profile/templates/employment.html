@@ -1,0 +1,104 @@
+<div class="fieldset column">
+    <span class="legend">Primary income</span>
+    <label class="row field text amount">
+        <span class="msg"></span>
+        <input type="number" name="empPayment" placeholder="Take home pay (monthly)">
+    </label>
+    <label class="row field select">
+        <span class="msg">Payment frequency</span>
+        <select name="empPaymentFrequency" data-placeholder="Payment frequency"></select>
+    </label>
+    <label class="row field select">
+        <span class="msg">Income source</span>
+        <select name="empIncomeSource" data-placeholder="Income source"></select>
+    </label>
+</div>
+<div class="fieldset column short expandable"></div>
+<div class="fieldset column full expandable">
+    <div class="fieldset row">
+        <label class="row_1_2 field text name">
+            <span class="msg"></span>
+            <input type="text" name="empPosition" placeholder="Position">
+        </label>
+        <label class="row_1_2 field text name">
+            <span class="msg"></span>
+            <input type="text" name="empEmployer" placeholder="Employer">
+        </label>
+    </div>
+    <div class="fieldset column">
+        <span class="legend">Work address</span>
+        <div class="fieldset row">
+            <label class="row_1_2 field text address">
+                <span class="msg"></span>
+                <input type="text" name="empAddress" placeholder="Work address">
+            </label>
+            <label class="row_1_2 field text city">
+                <span class="msg"></span>
+                <input type="text" name="empCity" placeholder="City">
+            </label>
+        </div>
+        <div class="fieldset row">
+            <label class="row_1_2 field select province">
+                <span class="msg">Province</span>
+                <select name="empProvince" data-placeholder="Province"></select>
+            </label>
+            <label class="row_1_2 field text postalCode">
+                <span class="msg"></span>
+                <input type="text" name="empPostalCode" placeholder="Postal code">
+            </label>
+        </div>
+        <div class="clearAddress">
+            <span>Is the above address not valid anymore?</span>
+            <button class="button additionalBtn">Clear address</button>
+        </div>
+    </div>
+    <div class="fieldset column">
+        <span class="legend">Work contacts</span>
+        <div class="fieldset row">
+            <label class="row_1_2 field text workPhone">
+                <span class="msg"></span>
+                <input type="tel" name="empPhoneNumber" placeholder="Work phone">
+            </label>
+            <label class="row_1_2 field text phone">
+                <span class="msg"></span>
+                <input type="number" name="empPhoneExtension" placeholder="Extension">
+            </label>
+        </div>
+        <div class="fieldset row">
+            <label class="row_1_2 field text name">
+                <span class="msg"></span>
+                <input type="text" name="empSupervisorName" placeholder="Supervisor name">
+            </label>
+            <label class="row_1_2 field text phone">
+                <span class="msg"></span>
+                <input type="tel" name="empSupervisorPhoneNumber" placeholder="Supervisor phone">
+            </label>
+        </div>
+    </div>
+    <div class="fieldset column currentWorkDuration">
+        <span class="legend">How long have you been working at your current place of employment?</span>
+        <label class="row field select years">
+            <span class="msg">Worked for</span>
+            <select name="empCurrentWorkDuration" class="empWorkingDurationMonths empWorkingDurationYears" data-placeholder="Worked for"></select>
+        </label>
+    </div>
+    <div class="fieldset column previousWorkDuration expandable">
+        <span class="legend">How long have you been working at your previous place of employment?</span>
+        <label class="row field select years">
+            <span class="msg">Worked for</span>
+            <select name="empPreviousWorkDuration" class="empPrevWorkingDurationMonths empPrevWorkingDurationYears" data-placeholder="Worked for"></select>
+        </label>
+    </div>
+</div>
+
+<div class="fieldset column">
+    <span class="legend">Additional income</span>
+    <label class="row field text amount">
+        <span class="msg"></span>
+        <input type="number" name="empAdditionalIncome" placeholder="Additional income">
+    </label>
+    <label class="row field text name">
+        <span class="msg"></span>
+        <input type="text" name="empAdditionalIncomeSource" placeholder="Source of additional income">
+    </label>
+</div>

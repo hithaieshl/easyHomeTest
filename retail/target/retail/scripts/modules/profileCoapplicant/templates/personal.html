@@ -1,0 +1,45 @@
+<div class="fieldset column">
+    <div class="fieldset row">
+        <label class="row_1_2 field text name">
+            <span class="msg">First name</span>
+            <input type="text" name="firstName" placeholder="First name">
+        </label>
+        <label class="row_1_2 field text name">
+            <span class="msg">Last name</span>
+            <input type="text" name="lastName" placeholder="Last name">
+        </label>
+    </div>
+    <div class="fieldset row">
+        <label for="personalBirthDate" class="row field text date birthDate">
+            <span class="msg">Birth date</span>
+            <input type="text" name="birthDate" id="personalBirthDate" placeholder="Date of Birth">
+        </label>
+    </div>
+	<div class="fieldset row">
+        <label for="relationToApplicant" class="row field select relationship">
+            <span class="msg">Relation to applicant</span>
+            <select name="relationToApplicant">
+                    <option disabled selected>Relationship to you</option>
+                    <option value="spouse">Spouse</option>
+                    <option value="parent">Parent</option>
+                    <option value="friend">Friend</option>
+                    <option value="other">Other</option>
+                </select>
+        </label>
+    </div>
+	<div class="fieldset column contacts">
+	    <span class="legend">Contacts</span>
+	    <label class="row field text homePhone">
+	        <span class="msg"></span>
+	        <input type="tel" name="homePhone" placeholder="Home phone number">
+	    </label>
+	    <label class="row field text workPhone">
+	        <span class="msg"></span>
+	        <input type="tel" name="workPhone" placeholder="Work phone number">
+	    </label>
+		<label class="row field text workPhone">
+	        <span class="msg"></span>
+	        <input type="text" name="workPhoneExt" placeholder="Work phone number extension">
+	    </label>
+	</div>
+</div>

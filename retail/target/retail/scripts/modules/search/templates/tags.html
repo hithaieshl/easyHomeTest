@@ -1,0 +1,8 @@
+<% _.each(tags, function(tag, key) { %> 
+    <% if (tag !== undefined && tag !== "" && required.indexOf(key) === -1) { %>
+        <span class="tag <%= key %>" data-name="<%= key %>">
+            <span class="text"><%= tag %></span>
+            <span class="close"></span>
+        </span>
+    <% } %>
+<% }); %>

@@ -1,0 +1,46 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #5cb527;
+    border-top-color: transparent;
+    border-radius: 100%;
+    animation: spin 1s infinite linear;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 0px;
+        display: block;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: #5cb527;
+        transform: rotate(45deg);
+    }
+}
+
+// If Module is in loading state, then display spinner,
+// otherwise (e.g. error, success) it should remain hidden
+.loading {
+    .overlay {
+        .spinner {
+            display: block;
+        }
+    }
+}
+

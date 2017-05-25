@@ -1,0 +1,126 @@
+.module.search {
+    height: 100%;
+    .search {
+        position: relative;
+        z-index: 10;
+        background: @white;
+        border-bottom: 1px solid @lightGrey;
+        
+        & > header {}
+        
+        & > .content {
+            flex: 1;
+            overflow-x: hidden;
+        }
+
+        &.simple {
+            .field.row_1_2+.field.row_1_2 {
+                border-left: 1px solid @lightGrey;
+            }
+        }
+
+        &.detailed {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            // android fix
+            //-webkit-box-orient: vertical;
+            z-index: 20;
+            transform: translateX(-100%);
+            transition: all 1s;
+
+            &.active {
+                position: absolute;
+                display: flex;
+                transform: translateX(0);
+            }
+            
+            // Detailed search header with close button inside
+            & > header {
+                display: flex;
+                justify-content: flex-end;
+                border-bottom: 1px solid @lightGrey;
+            }
+            & > .content {}
+            & > footer {}
+        }
+    }
+    .tags {
+        background-color: @white;
+        padding: 0 20px;
+        .tag {
+            background-color: @softGrey;
+            border-radius: 5px;
+            padding: 10px 0 10px 15px;
+            font-size: 14px;
+            margin: 10px 20px 10px 0;
+            min-height: 60px;
+            position: relative;
+            display: inline-block;
+            .text {
+                display: block;
+                padding: 10px 60px 0 0;
+            }
+            .close{
+                width: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                &:before {
+                    width: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    content: @iconClose;
+                    font: 28px/28px @fontIcons;
+                }
+            }
+        }
+    }
+    footer {
+        .expandedSearchBtn {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .clientList {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        
+        & > header {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+
+            .clientsCounter {
+                font-size: 12px;
+                color: @darkGrey;
+                margin-right: 20px;
+                display: block;
+                min-width: 90px;
+            }
+            .field {
+                border: 1px solid @lightGrey;
+            }
+        }
+        .clients {
+            width: 100%;
+            flex: 1 1 auto;
+            overflow: auto;
+            height: 100px;
+            min-height: 100px;
+        }
+    }
+}

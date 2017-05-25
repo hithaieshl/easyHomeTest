@@ -1,0 +1,23 @@
+<section class="success popup">
+    <header></header>
+    <section class="content">
+        <header>
+            <h2>
+            <% if (lang == 'fr') { %> 
+                 Merci pour le traitement de votre demande. Voir un associé en magasin pour les détails. 
+            <% } else if (lang == 'en') { %> 
+                 Thank you for processing your application. Please see store associate for details.
+            <% }%>
+            </h2>
+        </header>
+    </section>
+    <footer>
+        <a href="/search" data-internal="true" class="button home">
+            <% if (lang == 'fr') { %> 
+                Menu principal 
+            <% } else if (lang == 'en') { %> 
+                Home page
+            <% }%>
+    </a>
+    </footer>
+</section>

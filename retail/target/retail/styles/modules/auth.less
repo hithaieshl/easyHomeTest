@@ -1,0 +1,120 @@
+.module.auth {
+    & > header {
+        position: relative;
+        color: @corporateOrange;
+        &:before {
+            content: @iconInfo;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+            font: 20px/20px @fontIcons;
+        }
+        h1 {
+            padding: 10px 0 0 40px;
+            color: @corporateOrange;
+            font: bold 15px/22px @fontMain;
+            text-align: left;
+        }
+        ol {
+            padding: 0 0 0 50px;
+            font-size: 15px;
+            line-height: 22px
+        }
+    }
+    & > footer {}
+
+    // TransUnion Authentication
+    &.transUnion {
+        .questions {
+            flex: 1;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            counter-reset: term;
+            .question {
+                .legend {
+                    position: relative;
+                    // Counter
+                    &:before {
+                        content: counter(term);
+                        counter-increment: term;
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        background-color: #393939;
+                        border-radius: 25px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .noQuestions {
+            flex: 1;
+            &:before {
+                content: @iconWarning;
+                margin: 0 auto;
+                display: block;
+                color: #e5e5e5;
+                font: 150px @fontIcons;
+                text-align: center;
+            }
+            p {
+                margin: 0;
+                color: #404040;
+                font-size: 22px;
+                line-height: 30px;
+                text-align: center;
+            }
+        }
+    }
+    @media all and (min-width: 480px)   {}
+    @media all and (min-width: 640px)   {
+        & > header {
+            &:before {
+                top: 25px;
+                left: 25px;
+                font: 40px/40px @fontIcons;
+            }
+            h1 {
+                padding: 30px 0 0 90px;
+                font: bold 24px/30px @fontMain;
+            }
+            ol {
+                padding: 0 0 0 90px;
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+        &.transUnion {
+            .questions {
+                .question {
+                    .legend {
+                        padding-left: 90px;
+                        &:before {
+                            left: 25px;
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                        }
+                    }
+                    select {
+                        padding-left: 90px;
+                    }
+                }
+            }
+            .noQuestions {
+                &:before {
+                    font-size: 300px;
+                }
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    @media all and (min-width: 768px)   {}
+    @media all and (min-width: 1024px)  {}
+}

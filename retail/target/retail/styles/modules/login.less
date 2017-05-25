@@ -1,0 +1,185 @@
+.module.login {
+    height: auto !important;
+}
+.login {
+    position: relative;
+    background-color: @white;
+    transform: translateZ(0);
+    & > header {
+        margin-bottom: 20px;
+        text-align: center;
+        display: block;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        h2 {
+            background-color: @darkGrey;
+            color: @white;
+            padding: 20px;
+            font-size: 14px;
+            width: 100%;
+        }
+        h1 {
+            color: @concreteGrey;
+            padding: 20px;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: @fontCondensed;
+        }
+    }
+    .label {
+        font-size: 21px;
+        font-family: @fontCondensed;
+        background-color: @mediumOrange;
+        box-shadow: 0 -10px 0 0 rgba(0,0,0,.1) inset;
+        color: @white;
+        height: 50px;
+        transform: rotate(45deg) translate3D(60px, -25px, 0);
+        position: absolute;
+        right: 10px;
+        width: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    .title {
+        font-size: 35px;
+        color: @concreteGrey;
+        font-family: Myriad Pro;
+        margin-bottom: 10px;
+        text-align: center;
+        &:before {
+            content: @iconLogo;
+            display: block;
+            font-family: @fontIcons;
+            font-size: 226px;
+            margin-top: 100px;
+        }
+    }
+    
+    .salesperson-box {
+        width: 86%;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 40px;
+    }
+    .salesperson-box label {
+        width: auto;
+    }
+    
+    .salesperson-box .clear {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 20px;
+    }
+    .salesperson-box .js-clear-salesperson {
+        display: none;
+    }
+    .salesperson-box .js-clear-salesperson.visible {
+        display: block;
+    }
+    .salesperson-box .clear:hover,
+    .salesperson-names:hover {
+        cursor: pointer;
+    }
+    .salesperson-box .clear:before {
+        content: "\e62a";
+        display: block;
+        float: right;
+        color: #AAA;
+        font: 28px/28px 'easyhome-mobile';
+        -webkit-box-align: center;
+        align-items: center;
+    }
+    .salesperson-names {
+        padding-top: 0;
+        margin-top: -1px;
+        z-index: 2;
+        position: absolute;
+        padding-left: 50px;
+        width: 100%;
+        box-sizing: border-box;
+    } 
+    .salesperson-names span {
+        display: block;
+        font-size: 22px;
+        border-color: #e0e0e0;
+        border-style: solid;
+        border-width: 1px;
+        border-top-width: 0px;
+        padding: 20px;
+        background: #FFF;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .salesperson-names span:hover {
+        background: @lightGrey;
+    }
+    .salesperson-box .field {
+        border-top-width: 0 !important; 
+    }
+    .salesperson-box input {
+        padding-right: 70px !important;
+    }
+    .field {
+        width: 86%;
+        margin: 0 auto;
+        border: 1px solid @lightGrey;
+        border-top-width: 0;
+    }
+    .field {
+        &:first-of-type {
+            border-top-width: 1px;
+        }
+    }
+    .submitBtn {
+        margin: 0 auto;
+        width: 50%;
+        display: block;
+        text-transform: none;
+    }
+    & > footer {
+        position: absolute;
+        bottom: 0;
+        background-color: @lightestGrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+        a {
+            font-size: 14px;
+            text-decoration: none;
+            color: @darkGrey;
+        }
+    }
+    &.popup {
+        height: auto;
+        margin: 0 20px;
+        z-index: 120;
+        header {
+            position: relative;
+            .close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:before {
+                    content: @iconClose;
+                    font: 18px/18px @fontIcons;
+                    color: @lightGrey;
+                }
+            }
+        }
+    }
+}

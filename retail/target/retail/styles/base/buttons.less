@@ -1,0 +1,74 @@
+button, a {
+    font: bold 16px @fontCondensed;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+
+    &.home {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: @black;
+        text-indent: -9999px;
+    }
+    /*default button styles*/
+    &.button {
+        padding: 0 10px 10px;
+        min-width: 150px;
+        height: 60px;
+        background-color: @corporateGreen;
+        -webkit-appearance: none;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px -10px 0px rgba(0,0,0,.2) inset;
+        color: @white;
+        line-height: 50px;
+
+        &:active:not(:disabled) {
+            box-shadow: 0px -4px 0px rgba(0, 0, 0, 0.6) inset;
+            height: 54px;
+        }
+        &:disabled {
+            opacity: .5;
+            box-shadow: 0px -3px 0px rgba(0, 0, 0, 0.2) inset;
+            padding-bottom: 3px;
+        }
+        
+        &.additionalBtn {
+            background-color: @lightGrey;
+            color: @darkGrey;
+        }
+    }
+    &.navigation {
+    }
+    &.close {
+        position: relative;
+        padding: 0 0 0 15px;
+        -webkit-appearance: none;
+        border: none;
+        background-color: transparent;
+        color: #e5e5e5;
+        font-size: 19px;
+        text-transform: uppercase;
+        &:before, &:after {
+            position: absolute;
+            top: 12px;
+            left: -10px;
+            content: "";
+            display: block;
+            width: 19px;
+            height: 2px;
+            background-color: #e5e5e5;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+}

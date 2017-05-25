@@ -1,0 +1,28 @@
+<section class="success tu-authentication-popup popup">
+    <header><button class="close">Close</button></header>
+    <section class="content">
+        <header>
+            <h2>
+                Customer profile was updated successfully
+            </h2>
+        </header>
+    </section>
+    <footer class="success-popup-footer">
+        <% if( saveAsDraftFlag === true) { %>
+            <a href="search" data-internal="true" class="button home">Home page</a>
+        <% } else { %>
+            <!--
+                If TransUnion authentication is applicable for this customer,
+                then display a link to the Authentication page,
+                otherwise display a link to the home page.
+            -->
+            <% if( isTuAuthRequired === true) { %>	
+                <button class="js-auth-button-en button">Continue in English</button>
+                <button class="js-auth-button-fr button">Continuer en Français</button>
+            <% } %>
+            <% if( isTuAuthRequired !== true) { %>
+                <a href="search" data-internal="true" class="button home">Home page</a>
+            <% } %>
+        <% } %>
+    </footer>
+</section>

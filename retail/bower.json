@@ -1,0 +1,22 @@
+{
+    "name": "easyhome-retail"
+    ,"version": "0.1.573"
+    ,"dependencies": {
+         "almond":                  "latest"
+        ,"backbone":                "latest"
+        ,"backbone.stickit":        "latest"
+        ,"backbone.subroute":       "latest"
+        ,"backbone.dualstorage":    "latest"
+        ,"backbone-validation":     "latest"
+        ,"backbone-associations":   "latest"
+        ,"fastclick":               "latest"
+        ,"jquery":                  "latest"
+        ,"requirejs":               "latest"
+        ,"requirejs-text":          "latest"
+        ,"requirejs-plugins":       "latest"
+        ,"requirejs-domready":      "latest"
+        ,"underscore":              "latest"
+        ,"xregexp":                 "latest"
+        ,"vanilla-masker":          "0.3.0"
+    }
+}

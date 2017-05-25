@@ -1,0 +1,50 @@
+<div class="primary info">
+    <button class="checkStatusBtn btn">
+        <span class="btnTitle">check status</span>
+        <span class="spinner"></span>
+    </button>
+    <div class="vcard clientInfoCard">
+         <% if (getType() !== "") { %>
+        <span class="label <%= getType().toLowerCase() %>"><%= getType() %></span>
+        <% } %>
+        <% if (getIsApproved() === true) { %>
+            <span class="label approved">Approved</span>
+        <% } %>
+        <% if (getName() !== "") { %>
+            <span class="fn"><%= getName() %></span>
+        <% } %>
+        <div class="adr">
+            <% if (getProvince() !== "") { %>
+                <span class="region"><%= getProvince() %>,</span>
+            <% } %>
+            <% if (getCity() !== "") { %>
+                <span class="country-name"><%= getCity() %>,</span>
+            <% } %>
+            <% if (getAddress() !== "") { %>
+                <span class="street-address"><%= getAddress() %></span>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<div class="secondary info">
+    <div class="row">
+        <div class="vcard detailed detailedInfoCard">
+            
+            <span class="email"><%= getEmail() %></span>
+            <div class="adr">
+                <% if (getProvince() !== "") { %>
+                    <span class="region"><%= getProvince() %>,</span>
+                <% } %>
+                <% if (getCity() !== "") { %>
+                    <span class="country-name"><%= getCity() %>,</span>
+                <% } %>
+                <% if (getAddress() !== "") { %>
+                    <span class="street-address"><%= getAddress() %></span>
+                <% } %>
+            </div>
+            <span class="tel"><%= getCellPhone() %></span>
+        </div>
+        <button class="button navigationBtn">Continue    >></button>
+    </div>
+</div>

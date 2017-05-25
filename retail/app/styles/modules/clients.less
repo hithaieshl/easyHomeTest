@@ -1,0 +1,179 @@
+.client {
+    position: relative;
+    overflow: hidden;
+    .info {
+        background-color: @white;
+        .label {
+            color: @white;
+            margin-right: 10px;
+
+            &.online, &.attention {
+                background-color: @corporateOrange;
+                color: @white;
+            }
+            &.rsss {
+                background-color: @corporateGreen;
+            }
+            &.linked {
+                background-color: @lightGrey;
+                color: @darkGrey;
+            }
+            &.approved {
+                background-color: @corporateGreen;
+                color: @white;
+            }
+            &.draft {
+                background-color: #FEF102;
+                color: @darkGrey;
+            }
+        }
+        .field.radio + .vcard {
+            padding-left: 10px;
+        }
+        &.primary {
+            display: flex;
+            align-items: stretch;
+            border-width: 1px 0 0 0;
+            border-style: solid;
+            border-color: @lightGrey;
+            &:after {
+                content: @iconArrowDown;
+                color: @lightGrey;
+                font: 28px/28px @fontIcons;
+                padding-right: 20px;
+                display: flex;
+                align-items: center;
+            }
+            &.active {
+                &:after {
+                    content: @iconArrowUp;
+                }
+            }
+            &.selected {
+                background-color: @beige;
+                .vcard, .field.radio .icon {
+                    background-color: @beige;
+                }
+            }
+            .checkStatusBtn {
+                border: none;
+                width: 80px;
+                color: @darkGrey;
+                background-color: @lightestGrey;
+                
+                .btnTitle {
+                    font: inherit;
+                }
+                .spinner {
+                    border-color: @grey;
+                    border-top-color: transparent;
+                    &:after {
+                        border-bottom-color: @grey;
+                    }
+                }
+                &.loading {
+                    .spinner {
+                        display: block;
+                    }
+                    .btnTitle {
+                        display: none;
+                    }
+                }
+                &.isSuspicious, &.notSuspicious {
+                    .btnTitle {
+                        display: none;
+                    }
+                    &:before {
+                        color: @corporateOrange;
+                        font: 30px/30px @fontIcons;
+                        content: @iconThumbsDown;
+                    }
+                }
+                &.notSuspicious {
+                    &:before {
+                        color: @corporateGreen;
+                        content: @iconThumbsUp;
+                    }
+                }
+            }
+        }
+        &.secondary {
+            display: block;
+            height: 0;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            perspective: 1000;
+            transition: padding .3s linear;
+            background-color: @lightestGrey;
+            border-top: 1px solid @lightGrey;
+
+            &.active {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 0 0 20px 0;
+                height: auto;
+                width: 100%;
+            }
+            .attentionSection {
+                width: 100%;
+                padding: 0 20px 20px 30px;
+                background-color: @softGrey;
+                border-width: 0 0 1px 0;
+                border-style: solid;
+                border-color: @lightGrey;
+            }
+            .row {
+                display: flex;
+                flex: 1;
+                align-items: center;
+                padding: 15px 20px 15px 30px;
+            }
+        }
+        .caution {
+            width: 100%;
+            margin-top: 1px;
+            padding: 10px 20px 10px 30px;
+            background: @corporateOrange;
+            color: @white;
+            font-size: 14px;
+
+            li {
+                margin: 10px 0;
+                flex: 1;
+            }
+
+            .tag {
+                padding: 2px 5px;
+                background: @white;
+                color: @corporateOrange;
+                border-radius: 3px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .navigationBtn {
+        width: 80px;
+        cursor: pointer;
+    }
+
+    &:last-child {
+        .secondary {
+            border-bottom: 1px solid @lightGrey;
+        }
+    }
+}
+.noResults {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .noResultsLabel {
+        display: flex;
+        padding: 20px;
+        display: block;
+        color: @mediumGrey;
+        font-size: 26px;
+        text-align: center;
+    }
+}

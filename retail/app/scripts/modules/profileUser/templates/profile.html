@@ -1,0 +1,371 @@
+<header class="primary">
+    <a href="/" data-internal="true" class="home"></a>
+    <h1>Customer profile</h1>
+</header>
+
+<nav class="tabs">
+    <ul>
+        <li class="tab selected">Personal</li>
+        <li class="tab">Address</li>
+        <li class="tab">Employment</li>
+        <li class="tab">References</li>
+        <li class="tab">Orders</li>
+    </ul>
+</nav>
+
+<form action="#" class="panes">
+    <section class="pane personal">
+        <div class="fieldset">
+            <label class="row_1_2 field text name">
+                <span class="msg">First name</span>
+                <input type="text" name="firstname" placeholder="First name">
+            </label>
+            <label class="row_1_2 field text name">
+                <span class="msg">Last name</span>
+                <input type="text" name="lastname" placeholder="Last name">
+            </label>
+            <label class="row field text date">
+                <span class="msg">Birth date</span>
+                <input type="date" name="birthdate" placeholder="Birth date">
+            </label>
+            <label class="row_1_2 field radio gender male">
+                <input type="radio" name="gender">
+                <span class="label">Male</span>
+            </label>
+            <label class="row_1_2 field radio gender female">
+                <input type="radio" name="gender">
+                <span class="label">Female</span>
+            </label>
+            <label class="row field text sin">
+                <span class="msg">Social insurance number</span>
+                <input type="number" name="sin" placeholder="Social insurance number">
+            </label>
+            <label class="row field text photoId">
+                <span class="msg">Government issued photo id</span>
+                <input type="number" name="photoId" placeholder="Government issued photo id">
+            </label>
+        </div>
+        <div class="fieldset">
+            <span class="legend">Contacts</span>
+            <label class="row field text email">
+                <span class="msg">Email address</span>
+                <input type="text" name="email" placeholder="Email address">
+            </label>
+            <label class="row_1_2 field select">
+                <select name="phoneType">
+                    <option disabled selected>Type</option>
+                    <option value="0">Home</option>
+                    <option value="1">Work</option>
+                </select>
+            </label>
+            <label class="row_1_2 field text phone">
+                <span class="msg">Phone number</span>
+                <input type="text" name="phoneNumber" placeholder="Phone number">
+            </label>
+        </div>
+    </section>
+
+    <section class="pane address">
+        <div class="fieldset">
+            <label class="row_1_2 field select province">
+                <select name="province">
+                    <option disabled selected>Province</option>
+                    <option value="">province1</option>
+                    <option value="">province2</option>
+                    <option value="">province3</option>
+                    <option value="">province4</option>
+                    <option value="">province5</option>
+                </select>
+            </label>
+            <label class="row_1_2 field text city">
+                <span class="msg"></span>
+                <input type="text" name="city" placeholder="City">
+            </label>
+            <label class="row field text address">
+                <span class="msg"></span>
+                <input type="text" name="address" placeholder="Address">
+            </label>
+            <label class="row_1_2 field text suite">
+                <span class="msg"></span>
+                <input type="text" name="suite" placeholder="Suite/Unit #">
+            </label>
+            <label class="row_1_2 field text postalCode">
+                <span class="msg"></span>
+                <input type="text" name="postalCode" placeholder="Postal code">
+            </label>
+        </div>
+        <div class="fieldset">
+            <span class="legend">Do you rent or own your home?</span>
+            <label class="row_1_2 field radio ownership own">
+                <input type="radio" name="ownership" value="true">
+                <span class="label">Own</span>
+            </label>
+            <label class="row_1_2 field radio ownership rent">
+                <input type="radio" name="ownership" value="false">
+                <span class="label">Rent</span>
+            </label>
+            <!-- .details are hidden by default and only was of those is shown based on users radio ownership choice -->
+            <div class="fieldset ownership details"></div>
+            <div class="fieldset rental details">
+                <label class="row field text name">
+                    <span class="msg"></span>
+                    <input type="text" name="landlordName" placeholder="Landlord's name">
+                </label>
+                <label class="row field text tel">
+                    <span class="msg"></span>
+                    <input type="tel" name="landlordPhoneNumber" placeholder="Landlord's phone number">
+                </label>
+            </div>
+        </div>
+        <div class="fieldset">
+            <span class="legend">What is your monthly mortgage payment?</span>
+            <label class="row field text amount">
+                <span class="msg"></span>
+                <input type="text" name="monthlyPayment" placeholder="Monthly rent or mortgage payment">
+            </label>
+        </div>
+        <div class="fieldset">
+            <span class="legend">How long have you lived at your current residence?</span>
+            <label class="row_1_2 field select years">
+                <select name="livedYears">
+                    <option disabled selected>Years</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10+">10+</option>
+                </select>
+            </label>
+            <label class="row_1_2 field select months">
+                <select name="livedMonths">
+                    <option disabled selected>Months</option>
+                    <option value="0">--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10+">10+</option>
+                </select>
+            </label>
+        </div>
+    </section>
+    <section class="pane employment">
+        <label class="row field select">
+            <select name="incomeSource">
+                <option disabled selected>Source of income</option>
+                <option value="1">Full Time</option>
+                <option value="2">Part Time</option>
+                <option value="3">Self Employed</option>
+                <option value="4">Disability</option>
+                <option value="5">Pension</option>
+                <option value="6">Social Assistance</option>
+                <option value="7">Employment Insurance</option>
+            </select>
+        </label>
+        <div class="fieldset short"></div>
+        <div class="fieldset full">
+            <div class="fieldset">
+                <label class="row_1_2 field text">
+                    <span class="msg"></span>
+                    <input type="text" name="position" placeholder="Position">
+                </label>
+                <label class="row_1_2 field text">
+                    <span class="msg"></span>
+                    <input type="text" name="employer" placeholder="Employer">
+                </label>
+                <label class="row_1_2 field select">
+                    <select name="frequency">
+                        <option disabled selected>I am paid ...</option>
+                        <option value="0">Weekly(e.g. Every Friday)</option>
+                        <option value="1">Every two weeks(e.g. Every Other Friday)</option>
+                        <option value="2">Twice a month(e.g. The 15th and the last day of each month)</option>
+                        <option value="3">Monthly(e.g. The last day of each month)</option>
+                    </select>
+                </label>
+                <label class="row_1_2 field text">
+                    <span class="msg"></span>
+                    <input type="text" name="payment" placeholder="Take home pay (monthly)">
+                </label>
+            </div>
+            <div class="fieldset">
+                <span class="legend">Work address</span>
+                <label class="row_1_2 field select">
+                    <select name="province">
+                        <option disabled selected>Province</option>
+                    </select>
+                </label>
+                <label class="row_1_2 field text">
+                    <input type="text" name="city" placeholder="City">
+                </label>
+                <label class="row field text">
+                    <input type="text" name="address" placeholder="Work address">
+                </label>
+                <label class="row_1_2 field text suite">
+                    <span class="msg"></span>
+                    <input type="text" name="suite" placeholder="Suite/Unit #">
+                </label>
+                <label class="row_1_2 field text postalCode">
+                    <span class="msg"></span>
+                    <input type="text" name="postalCode" placeholder="Postal code">
+                </label>
+            </div>
+            <div class="fieldset">
+                <span class="legend">Work contacts</span>
+                <label class="row_1_2 field text phone">
+                    <input type="text" name="phone" placeholder="Work phone">
+                </label>
+                <label class="row_1_2 field text">
+                    <input type="text" name="extension" placeholder="Extension">
+                </label>
+                <label class="row_1_2 field text name">
+                    <input type="text" name="supervisor_name" placeholder="Supervisor name">
+                </label>
+                <label class="row_1_2 field text phone">
+                    <input type="text" name="supervisor_phone" placeholder="Supervisor phone">
+                </label>
+            </div>
+            <div class="row fieldset">
+                <span class="legend">How long have you been at your current place of employment?</span>
+                <label class="row_1_2 field select years">
+                    <select name="workedYears">
+                        <option disabled selected>Years</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10+">10+</option>
+                    </select>
+                </label>
+                <label class="row_1_2 field select months">
+                    <select name="workedMonths">
+                        <option disabled selected>Months</option>
+                        <option value="0">--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10+">10+</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="fieldset">
+            <span class="legend">Do you have another source of income?</span>
+            <label class="row field text">
+                <input type="text" name="additional_income" placeholder="Additional income">
+            </label>
+            <label class="row field text">
+                <input type="text" name="source" placeholder="Source of additional income">
+            </label>
+        </div>
+    </section>
+    <section class="pane references">
+        <div class="fieldset reference">
+            <span class="legend">Reference #1</span>
+            <label class="row_1_2 field text name">
+                <span class="msg"></span>
+                <input type="text" name="firstname" placeholder="First name">
+            </label>
+            <label class="row_1_2 field text name">
+                <span class="msg"></span>
+                <input type="text" name="lastname" placeholder="Last name">
+            </label>
+            <label class="row_1_2 field select relationship">
+                <span class="msg"></span>
+                <select name="relationship">
+                    <option disabled selected>Relationship to you</option>
+                    <option value="spouse">Spouse</option>
+                    <option value="parent">Parent</option>
+                    <option value="friend">Friend</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+            <label class="row_1_2 field text phone">
+                <span class="msg"></span>
+                <input type="text" name="phone" placeholder="Phone">
+            </label>
+        </div>
+        <div class="fieldset reference">
+            <span class="legend">Reference #2</span>
+            <label class="row_1_2 field text name">
+                <span class="msg"></span>
+                <input type="text" name="firstname" placeholder="First name">
+            </label>
+            <label class="row_1_2 field text name">
+                <span class="msg"></span>
+                <input type="text" name="lastname" placeholder="Last name">
+            </label>
+            <label class="row_1_2 field select relationship">
+                <span class="msg"></span>
+                <select name="relationship">
+                    <option disabled selected>Relationship to you</option>
+                    <option value="spouse">Spouse</option>
+                    <option value="parent">Parent</option>
+                    <option value="friend">Friend</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+            <label class="row_1_2 field text phone">
+                <span class="msg"></span>
+                <input type="text" name="phone" placeholder="Phone">
+            </label>
+        </div>
+        <div class="fieldset reference">
+            <span class="legend">Reference #3</span>
+            <label class="row_1_2 field text name">
+                <span class="msg"></span>
+                <input type="text" name="firstname" placeholder="First name">
+            </label>
+            <label class="row_1_2 field text name">
+                <span class="msg"></span>
+                <input type="text" name="lastname" placeholder="Last name">
+            </label>
+            <label class="row_1_2 field select relationship">
+                <span class="msg"></span>
+                <select name="relationship">
+                    <option disabled selected>Relationship to you</option>
+                    <option value="spouse">Spouse</option>
+                    <option value="parent">Parent</option>
+                    <option value="friend">Friend</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+            <label class="row_1_2 field text phone">
+                <span class="msg"></span>
+                <input type="text" name="phone" placeholder="Phone">
+            </label>
+        </div>
+    </section>
+    <section class="pane orders">
+        <h1>This feature is coming up soon...</h1>
+    </section>    
+</form>
+
+<footer class="primary">
+    <button class="button" disabled="disabled">Cancel</button>
+    <button class="button update">Save changes</button>
+</footer>
+
+

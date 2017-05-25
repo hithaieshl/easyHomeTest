@@ -1,0 +1,14 @@
+// Set for the element that should be hidden by default
+// but maybe revieled with slide animation by setting .active class
+.expandable {
+    height: 0;
+    transform: translate3d(0,0,0);
+    transition:  padding-top .3s linear
+                ,padding-bottom .3s linear;
+
+    &.active {
+        // padding-top: 20px;
+        // padding-bottom: 20px;
+        height: auto;
+    }
+}

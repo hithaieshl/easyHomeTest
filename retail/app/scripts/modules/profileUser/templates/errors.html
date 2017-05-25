@@ -1,0 +1,27 @@
+<section class="tu-authentication-popup popup">
+    <header><button class="close">Close</button></header>
+    <section class="content">
+        <header>
+            <h2>
+                Customer profile update attempt had the following errors:
+            </h2>
+        </header>
+        <table>
+        	<thead>
+        		<th>Field Name</th> <th>Message/Error</th>
+        	</thead>
+        	<tbody>
+        <% for (var i=0; i < errors.length; i++) { %>
+        		<tr>
+        			<td>
+        			<%= errors[i].fieldName %>
+        			</td>
+        			<td>
+        			<%= errors[i].errorMessage %>
+        			</td>
+        		</tr>
+        <% } %>        	
+        	</tbody>
+        </table>
+    </section>
+</section>

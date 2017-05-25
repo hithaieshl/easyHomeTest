@@ -1,0 +1,8 @@
+<ul class="caution">
+    <% _.each(reasons, function(reason) { %>
+        <li>
+            <span class="tag"><%= reason.reason %></span>
+            <span class="description"><%= reason.description %></span>
+        </li>
+    <% }); %>
+</ul>

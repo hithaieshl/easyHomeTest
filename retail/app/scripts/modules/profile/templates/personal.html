@@ -1,0 +1,118 @@
+<div class="fieldset column">
+    <div class="fieldset row">
+        <label class="row_1_2 field text name">
+            <span class="msg">First name</span>
+            <input type="text" name="firstName" placeholder="First name">
+        </label>
+        <label class="row_1_2 field text name">
+            <span class="msg">Last name</span>
+            <input type="text" name="lastName" placeholder="Last name">
+        </label>
+    </div>
+    <div class="fieldset row">
+        <label for="personalBirthDate" class="row field text date birthDate">
+            <span class="msg">Birth date</span>
+            <input type="text" name="birthDate" id="personalBirthDate" placeholder="Date of Birth">
+        </label>
+    </div>
+    <div class="fieldset row">
+        <label class="row_1_2 field radio gender male">
+            <input type="radio" name="gender" value="male">
+            <span class="label">Male</span>
+        </label>
+        <label class="row_1_2 field radio gender female">
+            <input type="radio" name="gender" value="female">
+            <span class="label">Female</span>
+        </label>
+    </div>
+
+    <!-- Customer number should be shown only on update form -->
+    <% if( mode === 'update') { %>
+        <div class="fieldset row">
+            <label class="row field text customerNumber locked">
+                <span class="msg">Customer number</span>
+                <input type="number" name="custacct" placeholder="Customer number" readonly>
+            </label>
+        </div>
+    <% } %>
+    <div class="fieldset row">
+        <label class="row field text sin">
+            <span class="msg">Social insurance number</span>
+            <input type="tel" name="sin" placeholder="Social insurance number">
+        </label>
+    </div>
+    <div class="fieldset row">
+        <label class="row field text photoId">
+            <span class="msg">Government issued photo id</span>
+            <input type="text" name="photoId" placeholder="Government issued photo id">
+        </label>
+    </div>
+</div>
+<div class="fieldset column contacts">
+    <span class="legend">Contacts</span>
+    <div class="fieldset column">
+        <label class="row field text email">
+            <span class="msg">Email address</span>
+            <input type="email" name="email" placeholder="Email address" autocomplete="on">
+        </label>
+        <label class="legend prompt">Don't have an email? 
+            <a class="inline" data-internal="false" href=" https://accounts.google.com/SignUp?service=mail">Sign up here</a>
+        </label>
+    </div>
+    <label class="row field text homePhone">
+        <span class="msg"></span>
+        <input type="tel" name="homePhone" placeholder="Home phone number">
+    </label>
+    <label class="row field text cellPhone">
+        <span class="msg"></span>
+        <input type="tel" name="cellPhone" placeholder="Cell phone number">
+    </label>
+    <label class="row field select communicationPreference">
+        <span class="msg">Communication preference</span>
+        <select name="communicationPreference" data-placeholder="Communication preference"></select>
+    </label>
+    <label class="row field select howDidYouHearAboutUs">
+        <span class="msg">How did you hear about us?</span>
+        <select name="howDidYouHearAboutUs" data-placeholder="How did you hear about us?"></select>
+    </label>
+</div>
+
+<!--<div class="fieldset column">
+    <span class="legend">Native status number</span>
+    <label class="row field text nativeStatusNumber">
+        <span class="msg"></span>
+        <input type="number" name="nativeStatusNumber" placeholder="Native status number">
+    </label>
+</div>-->
+
+<div class="fieldset column allowToContact">
+    <span class="legend">Do you consent to receiving information about our product and services and promotions?</span>
+    <div class="fieldset row">
+        <label class="row_1_2 field radio allowToContact yes">
+            <input type="radio" name="allowToContact" value="true">
+            <span class="label">Yes</span>
+        </label>
+        <label class="row_1_2 field radio allowToContact no">
+            <input type="radio" name="allowToContact" value="false">
+            <span class="label">No</span>
+        </label>
+    </div>
+</div>
+
+<div class="fieldset column isTermsAccepted">
+    <div class="legend">
+        <span class="text">Do you accept our terms and conditions?</span>
+        <button class="read"></button>
+    </div>
+    <div class="fieldset row">
+        <label class="row_1_2 field radio isTermsAccepted yes">
+            <input type="radio" name="isTermsAccepted" value="true">
+            <span class="label">Yes</span>
+        </label>
+        <label class="row_1_2 field radio isTermsAccepted no">
+            <input type="radio" name="isTermsAccepted" value="false">
+            <span class="label">No</span>
+        </label>
+    </div>
+    <span class="note">You need to accept our Terms and Conditions to proceed</span>
+</div>

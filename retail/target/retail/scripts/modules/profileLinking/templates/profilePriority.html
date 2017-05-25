@@ -1,0 +1,35 @@
+<header>
+    <h2>Which of these two accounts should be set as primary?</h2>
+</header>
+<div class="fieldset client row">
+<% _.each(profiles, function(profile) { %>
+    <div class="info row_1_2">
+        <label class="field radio defaultRadio">
+            <input class="profilePriority" type="radio" name="profilePriority" value="
+                <% if (profile.getType() === "RSSS") { %>RSSS<% } %>
+                <% if (profile.getType() !== "RSSS") { %>ONLINE<% } %>
+            ">
+            <span class="icon"></span>
+        </label>
+        <div class="vcard clientInfoCard">
+            <% if (profile.getType() !== "") { %>
+            <span class="label <%= profile.getType().toLowerCase() %>"><%= profile.getType() %></span>
+            <% } %>
+            <% if (profile.getName() !== "") { %>
+                <span class="fn"><%= profile.getName() %></span>
+            <% } %>
+            <div class="adr">
+                <% if (profile.getProvince() !== "") { %>
+                    <span class="region"><%= profile.getProvince() %>,</span>
+                <% } %>
+                <% if (profile.getCity() !== "") { %>
+                    <span class="country-name"><%= profile.getCity() %>,</span>
+                <% } %>
+                <% if (profile.getAddress() !== "") { %>
+                    <span class="street-address"><%= profile.getAddress() %></span>
+                <% } %>
+            </div>
+        </div>
+    </div>
+<% }); %>
+</div>

@@ -1,0 +1,109 @@
+&.radio {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    input[type="radio"] {
+        visibility: hidden;
+        width: 30px;
+        height: 30px;
+        & + span.label {
+            position: relative;
+            margin-left: 20px;
+            color: #bbbbbb;
+            font-size: 22px;
+            line-height: 30px;
+            &:before {
+                position: absolute;
+                top: 0;
+                left: -50px;
+                display: block;
+                color: #e5e5e5;
+                font: 30px/30px @fontIcons;
+            }
+        }
+        // Change icon and label color if selected
+        &:checked + span.label, &:checked + span.label:before {
+            color: #404040;
+        }
+    }
+
+    // States
+    &.valid {}
+    &.invalid {
+        input[type="radio"] {
+            & + span.label, & + span.label:before {
+                color: @corporateOrange;
+            }
+        }
+    }
+
+    // Types
+    &.gender {
+        &.male {
+            input[type="radio"] + span.label:before {
+                content: @iconMale;
+            }
+        }
+        &.female {
+            input[type="radio"] + span.label:before {
+                content: @iconFemale;
+            }
+        }
+    }
+
+    &.allowToContact, &.isTermsAccepted, &.hasCoapplicant, &.addressTheSame {
+        &.yes {
+            input[type="radio"] + span.label:before {
+                content: @iconTrue;
+            }
+        }
+        &.no {
+            input[type="radio"] + span.label:before {
+                content: @iconFalse;
+            }
+        }
+    }
+
+    &.ownership {
+        &.own {
+            input[type="radio"] + span.label:before {
+                content: @iconHouseOwn;
+            }
+        }
+        &.rent {
+            input[type="radio"] + span.label:before {
+                content: @iconHouseRent;
+            }
+        }
+    }
+    &.defaultRadio {
+        align-self: stretch;
+        overflow: visible;
+        input[type="radio"] {
+            & + span.icon {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: @lightestGrey;
+                box-shadow: 0 7px 0 0 rgba(0, 0, 0, 0.05), 0 7px 0 0 @lightestGrey;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:before {
+                    content: @iconTrue;
+                    color: @lightGrey;
+                    display: block;
+                    font: 28px/28px @fontIcons;
+                }
+            }
+            // Change icon and label color if selected
+            &:checked + span.icon {
+                &:before {
+                    color: @corporateGreen;
+                }
+            }
+        }
+    }
+}

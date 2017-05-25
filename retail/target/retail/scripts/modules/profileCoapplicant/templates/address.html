@@ -1,0 +1,48 @@
+<div class="fieldset column currentAddress">
+	<div class="fieldset column addrSameAsMainApplicant">
+		<div class="legend">
+			<span class="text">Address same as main applicant?</span>
+		</div>
+	    <div class="fieldset row">
+	        <label class="row_1_2 field radio addressTheSame yes">
+	            <input type="radio" name="addrSameAs" value="true">
+	            <span class="label">Yes</span>
+	        </label>
+	        <label class="row_1_2 field radio addressTheSame no">
+	            <input type="radio" name="addrSameAs" value="false">
+	            <span class="label">No</span>
+	        </label>
+	    </div>
+	    <div class="legend" id="addrSeparateTitle">
+			<span class="text">Separate Address for Co-applicant</span>
+		</div>
+	</div>
+	<div id="bulkItems">
+	    <div class="fieldset row">
+	        <label class="row_1_2 field text address" id="addrAddressLb">
+	            <span class="msg" id="addrAddressMsg"></span>
+	            <input type="text" id="addrAddress" name="addrAddress" placeholder="Address">
+	        </label>
+	        <label class="row_1_2 field text suite">
+	            <span class="msg"></span>
+	            <input type="text" id="addrSuite" name="addrSuite" placeholder="Suite/Unit #"/>
+	        </label>
+	    </div>
+	    <div class="fieldset row">
+	        <label class="row_1_2 field text city" id="addrCityLb">
+	            <span class="msg" id="addrCityMsg"></span>
+	            <input type="text" id="addrCity" name="addrCity" placeholder="City">
+	        </label>
+	        <label class="row_1_2 field select province" id="addrProvinceLb">
+	            <span class="msg" id="addrProvinceMsg">Province</span>
+	            <select id="addrProvince" name="addrProvince" data-placeholder="Province"></select>
+	        </label>
+	    </div>
+	    <div class="fieldset row">
+	        <label class="row field text postalCode" id="addrPostalCodeLb">
+	            <span class="msg" id="addrPostalCodeMsg"></span>
+	            <input type="text" id="addrPostalCode" name="addrPostalCode" placeholder="Postal code">
+	        </label>
+	    </div>
+    </div>
+</div>

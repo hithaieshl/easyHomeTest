@@ -1,0 +1,73 @@
+{
+    "personal": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "birthDate": "1/1/1970",
+        "gender": "male",
+        "sin": "382-827-382",
+        "photoId": "1212Nadshhajsd",
+        "email": "john.doe.15@gmail.com",
+        "custacct": "426869",
+        "password": "User11",
+        "homePhone": "4444444444",
+        "cellPhone": "4444444444"
+    },
+    "address": {
+        "province": "ON",
+        "city": "Toronto",
+        "address": "Golden st.10",
+        "suite": "5",
+        "postalCode": "N2K2N1",
+        "isOwner": "false",
+        "landlordName": "Jane Didio",
+        "landlordPhoneNumber": "8888888888",
+        "monthlyPayment": "3000",
+        "livingDurationYears": "0",
+        "livingDurationMonths": "7",
+        "prevLivingDurationYears": "1",
+        "prevLivingDurationMonths": "0",
+        "prevProvince": "BC",
+        "prevCity": "Montreal",
+        "prevAddress": "asdasd",
+        "prevPostalCode": "N2K2N1"
+    },
+    "employment": {
+        "incomeSource": "fullTime",
+        "position": "Mistress of the king",
+        "employer": "The King",
+        "address": "King Road. The Palace",
+        "city": "The Capital",
+        "province": "ON",
+        "postalCode": "N2K2N1",
+        "phoneNumber": "9999999999",
+        "phoneExtension": "123",
+        "supervisorName": "The King",
+        "supervisorPhoneNumber": "7777777777",
+        "workingDurationYears": "3",
+        "workingDurationMonths": "7",
+        "payment": "3000",
+        "paymentFrequency": "monthly",
+        "additionalIncome": "3000",
+        "additionalIncomeSource": "grandpa"
+    },
+    "references": [
+        {
+            "relationship": "mother",
+            "firstName": "Katty",
+            "lastName": "Doe",
+            "phoneNumber": "4444444444"
+        }
+        ,{
+            "relationship": "father",
+            "firstName": "Dan",
+            "lastName": "Doe",
+            "phoneNumber": "1111111111"
+        }
+        ,{
+            "relationship": "brother",
+            "firstName": "Ben",
+            "lastName": "Doe",
+            "phoneNumber": "3333333333"
+        }
+    ]
+}

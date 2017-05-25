@@ -1,0 +1,55 @@
+.vcard {
+    flex: 1;
+    background-color: @white;
+    padding: 20px;
+    cursor: pointer;
+    .label {
+        font-size: 14px;
+        vertical-align: text-bottom;
+        position: relative;
+        display: inline-block;
+        padding: 2px 4px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        &.attention {
+            display: inline-block;
+        }
+    }
+    .attentionDescription {
+        display: inline-block;
+    }
+    .caution {
+        color: @corporateOrange;
+        padding-bottom: 0;
+        font-style: italic;
+        font-size: 18px;
+        line-height: 18px;
+        margin-left: 10px;
+    }
+    .fn {
+        font-size: 18px;
+        font-weight: bold;
+        color: @darkGrey;
+    }
+    .adr {
+        font-size: 14px;
+        color: @grey;
+        margin-top: 10px;
+    }
+
+    &.detailed {
+        padding: 0;
+        background-color: @lightestGrey;
+        color: @darkGrey;
+        font-size: 14px;
+        span {
+            display: block;
+        }
+        .adr {
+            color: @darkGrey;
+        }
+        .attentionSection {
+            
+        }
+    }
+}

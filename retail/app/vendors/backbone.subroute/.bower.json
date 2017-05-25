@@ -1,0 +1,14 @@
+{
+  "name": "backbone.subroute",
+  "homepage": "https://github.com/ModelN/backbone.subroute",
+  "version": "0.4.1",
+  "_release": "0.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.4.1",
+    "commit": "1e4397b6a11279d22578c35af482d135783d713f"
+  },
+  "_source": "git://github.com/ModelN/backbone.subroute.git",
+  "_target": "*",
+  "_originalSource": "backbone.subroute"
+}

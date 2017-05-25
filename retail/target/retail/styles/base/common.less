@@ -1,0 +1,115 @@
+*, *:before, *:after {
+    // Apply correct box model
+    box-sizing: border-box;
+    // Better Font Rendering
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: html;
+    // Set OpenSans as a default font for everything
+    font-family: @fontMain;
+}
+
+// Android fix for incorrect height calculation
+html, body, .page-wrap, .page {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    & > header {
+        &:not(.hidden) {
+            & + .page-wrap {
+                & > .page {
+                    & > .module {
+                        padding-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    // The following cascade sets styling for basic classes
+    // and dictates the structure every page must follow
+    & > .page-wrap {
+        flex: 1;
+
+        & > .page {
+            & > .module {
+                padding-top: 0;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                overflow: hidden;
+                footer {
+                    position: relative;
+                    z-index: 1;
+                    padding: 20px;
+                    width: 100%;
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: @white;
+                    .button {
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-height: 724px) and (max-width: 768px), screen and (orientation: landscape) and (max-height: 468px){
+        .page-wrap .page .module,  .page-wrap .page .module.login form {
+            & > footer {
+                display: none;
+            }
+        }
+    }
+}
+.web .pane.personal .birthDate input {
+    width: 300px;
+    flex-grow: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.row {
+    flex: 1 100%;
+    width: 100%;
+    flex-direction: row;
+}
+
+.row_1_2 {
+    flex: 1 50%;
+    width: 50%;
+}
+.notification {
+    background-color: @lightestOrange;
+    color: @corporateOrange;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        font-size: 20px;
+    }
+    &:before {
+        content: @iconInfo;
+        margin-right: 10px;
+        display: block;
+        font: 30px/30px @fontIcons;
+    }
+}

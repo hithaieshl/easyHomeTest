@@ -1,0 +1,42 @@
+{
+  "name": "EasyOrders",
+  "description": "Hybrid application for android tablets, that will allow retail managers to lookup a customer and complete the order.",
+  "version": "0.1.573",
+  "author": {
+    "name": "Sviatoslav Zalishchuk",
+    "email": "szalishchuk@gmail.com"
+  },
+  "private": true,
+  "dependencies": {
+    "bower": "*",
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-env": "*",
+    "grunt-ssh": "*",
+    "grunt-shell": "*",
+    "grunt-phonegap": "*",
+    "grunt-preprocess": "*",
+    "grunt-version": "*",
+    "grunt-weinre": "*",
+    "request": "*",
+    "matchdep": "*",
+    "moment": "*",
+    "phonegap": "*"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "devDependencies": {
+    "grunt-responsive-images": "~0.1.3"
+  }
+}

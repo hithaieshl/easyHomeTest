@@ -1,0 +1,17 @@
+<% if( mode === 'add') { %>
+    <button type="submit" class="row_1_2 button add" disabled>Register</button>
+    <!-- Button to autofill profile form for convenience -->
+<% } %>
+
+<% if( mode === 'update') { %>
+    <button type="button" class="row_1_2 button additionalBtn undo" disabled>Undo</button>
+    <button type="submit" class="row_1_2 button update" disabled>Save changes</button>
+<% } %>
+
+
+
+    <% if (localStorage.getItem("environment").indexOf("Dev") !== -1) { %>
+        <button class="auto-fill button">Autofill all inputs</button>
+    <% } %>
+
+<button class="button draft-save" disabled>Save as draft</button>

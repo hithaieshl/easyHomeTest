@@ -1,0 +1,86 @@
+.profileLinking {
+    height: 100%;
+    background-color: @lightestGrey;
+    & > header {
+        background-color: @lightestOrange;
+        color: @corporateOrange;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 20px;
+        }
+        &:before {
+            content: @iconInfo;
+            margin-right: 10px;
+            display: block;
+            font: 30px/30px @fontIcons;
+        }
+    }
+    
+    .matches, .onlineProfile, .profilePriority {
+        & > header {
+            overflow: hidden;
+            h2 {
+                text-transform: uppercase;
+                padding: 15px;
+                text-align: center;
+                border-color: @lightGrey;
+                border-width: 1px 0;
+                border-style: solid;
+                color: @darkGrey;
+                width: 100%;
+                font-weight: normal;
+            }
+            .field {
+                border: 1px solid @lightGrey;
+                margin: 20px;
+            }
+        }
+    }
+    .matches {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        .clients {
+            overflow: auto;
+        }
+    }
+    .info {
+        .field{
+            &.radio {
+                height: auto;
+                border: none;
+                padding: 0;
+                align-self: stretch;
+                min-width: 60px;
+            }
+            .label {
+                width: auto;
+                top: -10px;
+            }
+        }
+    }
+    .profilePriority {
+        overflow: hidden;
+        height: 0;
+        padding: 0;
+        transition: padding 1s;
+        & > header {
+            h2 {
+                text-transform: none;
+            }
+        }
+        &.active {
+            height: auto;
+            padding: 20px 0;
+        }
+        .client {
+            border-bottom: 1px solid @lightGrey;
+        }
+        .info {
+            display: flex;
+        }
+    }
+}

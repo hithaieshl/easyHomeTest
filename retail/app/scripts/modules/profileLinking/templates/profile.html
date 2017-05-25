@@ -1,0 +1,45 @@
+<div class="primary info">
+     <% if (getType() === "RSSS") { %>
+        <label class="field radio defaultRadio">
+            <input class="profileLink" type="radio" name="profileLink">
+            <span class="icon"></span>
+        </label>
+    <% } %>
+    <div class="vcard clientInfoCard">
+         <% if (getType() !== "") { %>
+        <span class="label <%= getType().toLowerCase() %>"><%= getType() %></span>
+        <% } %>
+        <% if (getName() !== "") { %>
+            <span class="fn"><%= getName() %></span>
+        <% } %>
+        <div class="adr">
+            <% if (getProvince() !== "") { %>
+                <span class="region"><%= getProvince() %>,</span>
+            <% } %>
+            <% if (getCity() !== "") { %>
+                <span class="country-name"><%= getCity() %>,</span>
+            <% } %>
+            <% if (getAddress() !== "") { %>
+                <span class="street-address"><%= getAddress() %></span>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<div class="secondary info">
+    <div class="vcard detailed detailedInfoCard">
+        <span class="email"><%= getEmail() %></span>
+        <div class="adr">
+            <% if (getProvince() !== "") { %>
+                <span class="region"><%= getProvince() %>,</span>
+            <% } %>
+            <% if (getCity() !== "") { %>
+                <span class="country-name"><%= getCity() %>,</span>
+            <% } %>
+            <% if (getAddress() !== "") { %>
+                <span class="street-address"><%= getAddress() %></span>
+            <% } %>
+        </div>
+        <span class="tel"><%= getCellPhone() %></span>
+    </div>
+</div>

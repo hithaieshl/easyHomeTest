@@ -1,0 +1,178 @@
+label {
+    display: block;
+}
+
+// Inputs with text entry
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="search"],
+select {
+    color: #404040;
+    font-size: 14px;
+}
+
+// Placeholder's styling
+&::-webkit-input-placeholder {
+    color: #bbbbbb;
+    font-size: 22px;
+    line-height: 30px;
+}
+/* Firefox 19+ */
+&:-moz-placeholder {
+    color: #bbbbbb;
+    font-size: 22px;
+    line-height: 30px;
+}
+/* Firefox 18- */
+&::-moz-placeholder {
+    color: #bbbbbb;
+    font-size: 22px;
+    line-height: 30px;
+}
+&:-ms-input-placeholder {
+    color: #bbbbbb;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+// Remove spinner on input[type="number"]
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+// We use div.fieldset instead of fieldset element,
+// because of the flexbox issue with fieldset
+// more info here: http://goo.gl/aByoau
+fieldset, .fieldset {
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &.row {
+        display: flex;
+        flex: 1 100%;
+        flex-direction: row;
+    }
+    &.column {
+        display: block;
+    }
+    legend, .legend {
+        position: relative;
+        padding: 10px 0 10px 50px;
+        display: block;
+        flex: 1 100%;
+        background-color: #404040;
+        color: @white;
+        font-size: 15px;
+        line-height: 30px;
+        text-align: left;
+        &.prompt {
+            color: @white;
+            background-color: #404040;
+            font-size: 20px;
+            line-height: 40px;
+        }
+    }
+
+    // Display border for the first .row_1_2,
+    // but do not for the one right next to it
+    & > .row_1_2 {
+        border-right: 1px solid @lightGrey;
+    }
+    @media all and (min-width: 480px)   {}
+    @media all and (min-width: 640px)   {
+        legend, .legend {
+            padding-left: 70px;
+            font-size: 20px;
+            line-height: 40px;
+        }
+    }
+    @media all and (min-width: 768px)   {}
+    @media all and (min-width: 1024px)  {}
+}
+
+
+// Fields
+label.field {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid @lightGrey;
+    background-color: @white;
+
+    @import "text";
+    @import "radio";
+    @import "select";
+    @import "checkbox";
+
+    // .msg aka .message containts either field's placeholder
+    // to indicate what field is this, and
+    // to show validation error messages
+    .msg {
+        position: absolute;
+        top: -5px;
+        right: 25px;
+        transform: translate3d(0, -100%, 0);
+        transition-duration: .25s;
+        color: #3c3c3c;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    &.valid {
+        &:after {
+            display: block;
+            border-bottom-color: @corporateGreen;
+        }
+        .msg {
+            color: @corporateGreen;
+            transform: translate3d(0, 20%, 0);
+        }
+    }
+    &.invalid {
+        &:after {
+            display: block;
+            border-bottom-color: @corporateOrange;
+        }
+        .msg {
+            color: @corporateOrange;
+            transform: translate3d(0, 20%, 0);
+        }
+    }
+}
+
+.fieldset.isTermsAccepted {
+    .legend {
+        button.read {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            padding: 0;
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: none;
+            background: transparent;
+            -webkit-appearance: none;
+            
+            &:before {
+                content: @iconTC;
+                display: block;
+                width: 30px;
+                height: 30px;
+                font: 30px/30px @fontIcons;
+            }
+        }
+    }
+    @media all and (min-width: 640px) {
+        // 
+    }
+}

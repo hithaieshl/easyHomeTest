@@ -1,0 +1,112 @@
+<div class="fieldset column currentAddress">
+    <div class="fieldset row">
+        <label class="row_1_2 field text address">
+            <span class="msg"></span>
+            <input type="text" id="addrAddress" name="addrAddress" placeholder="Address">
+        </label>
+        <label class="row_1_2 field text suite">
+            <span class="msg"></span>
+            <input type="text" id="addrSuite" name="addrSuite" placeholder="Suite/Unit #"/>
+        </label>
+    </div>
+    <div class="fieldset row">
+        <label class="row_1_2 field text city">
+            <span class="msg"></span>
+            <input type="text" id="addrCity" name="addrCity" placeholder="City">
+        </label>
+        <label class="row_1_2 field select province">
+            <span class="msg">Province</span>
+            <select id="addrProvince" name="addrProvince" data-placeholder="Province"></select>
+        </label>
+    </div>
+    <div class="fieldset row">
+        <label class="row field text postalCode">
+            <span class="msg"></span>
+            <input type="text" id="addrPostalCode" name="addrPostalCode" placeholder="Postal code">
+        </label>
+    </div>
+    <div class="clearAddress">
+        <span>Is the above address not valid anymore?</span>
+        <button class="button additionalBtn">Clear address</button>
+    </div>
+</div>
+<div class="fieldset column residence">
+    <span class="legend">Do you rent or own your home?</span>
+    <div class="fieldset row">
+        <label class="row_1_2 field radio ownership own">
+            <input type="radio" name="addrIsOwner" value="true">
+            <span class="label">Own</span>
+        </label>
+        <label class="row_1_2 field radio ownership rent">
+            <input type="radio" name="addrIsOwner" value="false">
+            <span class="label">Rent</span>
+        </label>
+    </div>
+    <!-- .details are hidden by default and only was of those is shown based on users radio ownership choice -->
+    <div class="fieldset column ownership details expandable">
+        <label class="row field text amount">
+            <span class="msg"></span>
+            <input type="number" name="addrMonthlyMortgagePayment" class="addrMonthlyPayment" placeholder="Monthly payment">
+        </label>
+    </div>
+    <div class="fieldset column rental details expandable">
+        <label class="row field text amount">
+            <span class="msg"></span>
+            <input type="number" name="addrMonthlyRentPayment" class="addrMonthlyPayment" placeholder="Monthly payment">
+        </label>
+        <label class="row field text name">
+            <span class="msg"></span>
+            <input type="text" name="addrLandlordName" placeholder="Landlord's name">
+        </label>
+        <label class="row field text phone">
+            <span class="msg"></span>
+            <input type="tel" name="addrLandlordPhoneNumber" placeholder="Landlord's phone number">
+        </label>
+    </div>
+</div>
+<div class="fieldset column currentAddress">
+    <span class="legend">How long have you lived at your current residence?</span>
+    <div class="fieldset row">
+        <label class="row field select years">
+            <span class="msg">Lived for</span>
+            <select name="addrLivingDuration" class="addrLivingDurationYears addrLivingDurationMonths" data-placeholder="Lived for"></select>
+        </label>
+    </div>
+</div>
+<div class="fieldset column prevAddress expandable">
+    <span class="legend">Where did you live before?</span>
+    <div class="fieldset row">
+        <label class="row field select years">
+            <span class="msg">Lived for</span>
+            <select name="addrPrevlivingDuration" class="addrPrevLivingDurationYears addrPrevLivingDurationMonths" data-placeholder="Lived for"></select>
+        </label>
+    </div>
+    <div class="fieldset">
+        <div class="fieldset row">
+            <label class="row field text address">
+                <span class="msg"></span>
+                <input type="text" name="addrPrevAddress" placeholder="Address">
+            </label>
+        </div>
+        <div class="fieldset row">
+            <label class="row_1_2 field text city">
+                <span class="msg"></span>
+                <input type="text" name="addrPrevCity" placeholder="City">
+            </label>
+            <label class="row_1_2 field select province">
+                <span class="msg">Province</span>
+                <select name="addrPrevProvince" data-placeholder="Province"></select>
+            </label>
+        </div>
+        <div class="fieldset row">
+            <label class="row field text postalCode">
+                <span class="msg"></span>
+                <input type="text" name="addrPrevPostalCode" placeholder="Postal code">
+            </label>
+        </div>
+        <div class="clearAddress">
+            <span>Is the above address not valid anymore?</span>
+            <button class="button additionalBtn">Clear address</button>
+        </div>
+    </div>
+</div>

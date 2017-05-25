@@ -1,0 +1,10 @@
+{
+  "lib": {
+    "www": {
+      "id": "retail"
+      ,"version": "0.1.573"
+    }
+  }
+  ,"id": "com.phonegap.retail"
+  ,"name": "EasyOrders"
+}

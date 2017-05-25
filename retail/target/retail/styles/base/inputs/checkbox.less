@@ -1,0 +1,51 @@
+&.checkbox {
+    padding: 0 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        visibility: hidden;
+        width: 18px;
+        height: 18px;
+        & + span.label {
+            position: relative;
+            margin-left: 15px;
+            color: #404040;
+            font-size: 14px;
+            line-height: 20px;
+            // Fake checkbox
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -33px;
+                display: block;
+                width: 18px;
+                height: 18px;
+                border: 1px solid #cacaca;
+                border-radius: 5px;
+                background-color: #fff;
+            }
+            // Checked state for fake checkbox
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                top: 3px;
+                left: -29px;
+                width: 16px;
+                height: 12px;
+                .image(-249px -9px);
+            }
+        }
+        // Change the state of fake checkbox, once the real one is checked
+        &:checked + span.label:after {
+            display: block;
+        }
+        
+    }
+}

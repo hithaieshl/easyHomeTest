@@ -1,0 +1,84 @@
+&.select {
+    min-height: 50px;
+    // Field icon
+    &:before, &:after {
+        content: "";
+        margin: 0 20px;
+        display: block;
+        color: #e5e5e5;
+        font: 30px/30px @fontIcons;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        content: @iconArrowDown;
+        right: 0;
+    }
+
+    select {
+        padding: 14px 50px;
+        flex-grow: 1;
+        display: block;
+        border: none;
+        -webkit-appearance: none;
+        font-size: 15px;
+        line-height: 22px;
+        width: 100%;
+        background: transparent;
+        position: absolute;
+        z-index: 20;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    // States
+    &.valid, &.invalid {
+        &:after {
+            display: flex;
+        }
+    }
+    &.invalid {
+        color: @corporateOrange;
+    }
+
+    // Types
+    &.province:before {
+        content: @iconProvince;
+    }
+    &.years:before {
+        content: @iconCalendarYear;
+    }
+    &.months:before {
+        content: @iconCalendarMonth;
+    }
+    &.incomeSource:before {
+        content: @iconAmount;
+    }
+    &.communicationPreference:before {
+        content: @iconGears;
+    }
+    &.howDidYouHearAboutUs:before {
+        content: @iconBullhorn;
+    }
+
+    @media all and (min-width: 480px)   {}
+    @media all and (min-width: 640px)   {
+        min-height: 70px;
+        select {
+            padding: 20px 70px;
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+    @media all and (min-width: 768px)   {}
+    @media all and (min-width: 1024px)  {}
+}
