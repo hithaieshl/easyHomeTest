@@ -4,7 +4,7 @@ define([], function() {
             
             
             // Production environment
-            ,prod: {
+            prod: {
                  desktopProtocol: "https"
                 ,desktopBaseUrl: "admin.easyhome.ca"
                 ,baseUrl: "https://admin.easyhome.ca"
