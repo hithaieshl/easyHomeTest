@@ -1,48 +1,8 @@
 define([], function() {
     var env = {
         config: {
-            // Local development environment
-            dev: {
-                 desktopProtocol: "https://"
-                ,desktopBaseUrl: "https://localhost:8444"
-                ,baseUrl: "https://localhost:8444"
-                ,desktopRedirectionBustParameter: "referral=mobile"
-                ,profile: "https://localhost:8444/api/customer"
-                ,fullSearch: "https://localhost:8444/api/customer/fullsearch"
-                ,credentials: "https://localhost:8444/retail/getCredentials"
-                ,customerLogin: "https://localhost:8444/api/customer"
-                ,checkPassword: "https://localhost:8444/api/customer/checkPassword"
-                ,link: "https://localhost:8444/api/customer/link"
-                ,customerSendResetEmail: "https://localhost:8444/api/customer/sendResetPasswordEmail"
-                ,customerResetPassword: "https://localhost:8444/api/customer/resetPassword"
-                ,managerLogin: "https://localhost:8444/api/manager/login"
-                ,login: "https://localhost:8444/api/customer/login"
-                ,tuAuth: "https://localhost:8444/api/tu/questions"
-                ,timeTracker: "https://localhost:8444/api/customer/trackProfileStatistic"
-                ,checkSuspiciousCustomer: "https://localhost:8444/api/customer/checkstolen"
-                ,gaAccount: "UA-52624293-1"
-            }
-            // User Acceptance Testing
-            ,uat: {
-                 desktopProtocol: "https://"
-                ,desktopBaseUrl: "easyhome-admin-uat.herokuapp.com"
-                ,baseUrl: "https://easyhome-admin-uat.herokuapp.com"
-                ,desktopRedirectionBustParameter: "referral=mobile"
-                ,profile: "https://easyhome-admin-uat.herokuapp.com/api/customer"
-                ,fullSearch: "https://easyhome-admin-uat.herokuapp.com/api/customer/fullsearch"
-                ,credentials: "https://easyhome-admin-uat.herokuapp.com/retail/getCredentials"
-                ,customerLogin: "https://easyhome-admin-uat.herokuapp.com/api/customer"
-                ,checkPassword: "https://easyhome-admin-uat.herokuapp.com/api/customer/checkPassword"
-                ,link: "https://easyhome-admin-uat.herokuapp.com/api/customer/link"
-                ,customerSendResetEmail: "https://easyhome-admin-uat.herokuapp.com/api/customer/sendResetPasswordEmail"
-                ,customerResetPassword: "https://easyhome-admin-uat.herokuapp.com/api/customer/resetPassword"
-                ,managerLogin: "https://easyhome-admin-uat.herokuapp.com/api/manager/login"
-                ,login: "https://easyhome-admin-uat.herokuapp.com/api/customer/login"
-                ,tuAuth: "https://easyhome-admin-uat.herokuapp.com/api/tu/questions"
-                ,timeTracker: "https://easyhome-admin-uat.herokuapp.com/api/customer/trackProfileStatistic"
-                ,checkSuspiciousCustomer: "https://easyhome-admin-uat.herokuapp.com/api/customer/checkstolen"
-                ,gaAccount: "UA-52624293-1"
-            }
+            
+            
             // Production environment
             ,prod: {
                  desktopProtocol: "https"
@@ -73,20 +33,20 @@ define([], function() {
                 ,environment = window.localStorage.getItem('environment');
 
             // environment <-> urlSet mapping
-            switch(environment) {
-                // Browser based environments
-                case "webDev": urlSet = "dev"; break;
-                case "webUat": urlSet = "uat"; break;
-                case "webProd": urlSet = "prod"; break;
-                // Application environments
-                case "appDev": urlSet = "dev"; break;
-                case "appUat": urlSet = "uat"; break;
-                case "appProd": urlSet = "prod"; break;
+            // switch(environment) {
+            //     // Browser based environments
+            //     // case "webDev": urlSet = "dev"; break;
+            //     // case "webUat": urlSet = "uat"; break;
+            //     case "webProd": urlSet = "prod"; break;
+            //     // Application environments
+            //     // case "appDev": urlSet = "dev"; break;
+            //     // case "appUat": urlSet = "uat"; break;
+            //     case "appProd": urlSet = "prod"; break;
 
-                default: urlSet = "dev";
-                //throw Error('environment property is not set in localStorage. Please check "~/app/_index.html" file');
-            }
-
+            //     default: urlSet = "prod";
+            //     //throw Error('environment property is not set in localStorage. Please check "~/app/_index.html" file');
+            // }
+            urlSet = "prod";
             return urlSet;
         }
         ,getUrlFor: function(key) {
